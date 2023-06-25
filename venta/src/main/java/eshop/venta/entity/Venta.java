@@ -3,6 +3,7 @@ package eshop.venta.entity;
 import eshop.venta.dto.Cliente;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import java.util.Date;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,11 @@ public class Venta {
     private String numero;
     private String descripcion;
     private Integer clienteId;
-    private String fecha;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "fecha")
+    private Date fecha;
+
+    //private String fecha;
     @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "venta_id")
