@@ -15,7 +15,6 @@
     <description>catalogo</description>
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2022.0.2</spring-cloud.version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,6 +43,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>
